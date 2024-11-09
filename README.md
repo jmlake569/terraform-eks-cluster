@@ -39,7 +39,7 @@ terraform-eks-cluster/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/terraform-eks-cluster.git
+git clone https://github.com/jmlake569/terraform-eks-cluster.git
 cd terraform-eks-cluster
 ```
 
