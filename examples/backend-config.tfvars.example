@@ -1,0 +1,12 @@
+# S3 Configuration for Terraform State Storage
+
+# The name of an existing S3 bucket for Terraform state storage (must be created manually).
+# Ensure versioning is enabled on this bucket.
+s3_bucket = "YOUR-BUCKET-HERE"
+
+# Path (key) in the S3 bucket for storing the Terraform state file.
+# This path can be customized as needed.
+terraform_state_key = "eks-lab-example/terraform.tfstate"
+
+# AWS region where the existing S3 bucket is located.
+region = "us-east-1"

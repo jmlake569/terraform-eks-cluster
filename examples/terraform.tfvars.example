@@ -1,0 +1,48 @@
+# examples/terraform.tfvars.example
+
+# AWS Settings
+# Specify the AWS region where the infrastructure will be deployed.
+region = "us-west-2"  # Change to your preferred AWS region
+
+# CIDR block for the VPC
+vpc_cidr_block = "10.0.0.0/16"  # Adjust if needed for your network setup
+
+# Number of subnets to create (public and private)
+subnet_count = 2  # Increase if more subnets are required for high availability
+
+# EKS Cluster Configuration
+# Version of Kubernetes for the EKS cluster
+kubernetes_version = "1.30"
+
+# Scaling configuration for EKS worker nodes
+eks_scaling_config = {
+  desired_size = 2  # Desired number of worker nodes
+  min_size     = 1  # Minimum number of worker nodes
+  max_size     = 3  # Maximum number of worker nodes
+}
+
+# EC2 instance types for EKS worker nodes (Use ARM-compatible instance types)
+node_instance_type = ["t4g.medium"]  # Set to preferred ARM-compatible instance types
+
+# Name of the EKS cluster (Required: Set a unique name for your cluster)
+cluster_name = "eks-lab-arm-example"
+
+# S3 Configuration for Terraform State
+# Name of an existing S3 bucket for Terraform state storage (must be created manually)
+s3_bucket = "my-terraform-state-bucket"  # Replace with your existing S3 bucket name
+
+# Path (key) for the Terraform state file within the S3 bucket
+terraform_state_key = "path/to/terraform/state"  # Define the path for the state file
+
+# Tagging and Environment Information
+# Environment for tagging (dev, staging, prod)
+environment = "dev"  # Set to your current environment
+
+# Application name for tagging
+application = "example-app"  # Replace with your application's name
+
+# Group name for tagging
+group = "example-group"  # Replace with your group or team name
+
+# Project name for tagging
+project_name = "eks-lab-arm-example"  # Change to your project name if needed
