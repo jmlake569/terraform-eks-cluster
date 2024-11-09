@@ -129,7 +129,6 @@ terraform destroy
 
 ## Troubleshooting
 
-- **Bucket Already Exists Error**: If you get an error that the S3 bucket already exists, make sure to specify a unique name in `s3_bucket` and confirm the bucket is created manually.
 - **Permission Issues**: Ensure your AWS credentials have the necessary permissions to create the required resources.
 
 ## Additional Notes
